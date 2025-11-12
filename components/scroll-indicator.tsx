@@ -51,12 +51,7 @@ export function ScrollIndicator() {
           exit={{ opacity: 0, scale: 0, y: 50 }}
           whileHover={{ scale: 1.1 }}
         >
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-          >
-            {Math.round(scrollY)}%
-          </motion.div>
+          <span>{Math.round(scrollY)}%</span>
         </motion.div>
       )}
     </>
