@@ -40,7 +40,7 @@ export function Craftsmanship() {
           transition={{ duration: 12, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,70,239,0.12),transparent_55%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(12,176,192,0.18),transparent_55%)]"
           animate={{ rotate: prefersReducedMotion ? 0 : [0, 5, -3, 0] }}
           transition={{ duration: 22, repeat: prefersReducedMotion ? 0 : Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         />
@@ -80,20 +80,20 @@ export function Craftsmanship() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-5 top-0 hidden h-full w-px bg-gradient-to-b from-magenta-500/40 via-foreground/10 to-transparent md:block" />
+          <div className="absolute left-5 top-0 hidden h-full w-px bg-gradient-to-b from-[#0cb0c0]/40 via-foreground/10 to-transparent md:block" />
 
           <div className="space-y-10">
             {JOURNEY_STEPS.map((step, index) => (
               <motion.article
                 key={step.title}
-                className="relative overflow-hidden rounded-3xl border border-foreground/10 bg-background/70 p-8 shadow-lg shadow-magenta-500/5 backdrop-blur"
+                className="relative overflow-hidden rounded-3xl border border-foreground/10 bg-background/70 p-8 shadow-[0_30px_60px_rgba(9,164,176,0.08)] backdrop-blur"
                 initial={{ opacity: 0, y: 48 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ delay: 0.1 * index, duration: 0.8, ease: "easeOut" }}
               >
                 <motion.div
-                  className="pointer-events-none absolute -top-10 -right-10 h-36 w-36 rounded-full bg-gradient-to-br from-magenta-500/15 via-white/5 to-transparent blur-2xl"
+                  className="pointer-events-none absolute -top-10 -right-10 h-36 w-36 rounded-full bg-gradient-to-br from-[#0cb0c0]/20 via-white/5 to-transparent blur-2xl"
                   animate={{
                     scale: prefersReducedMotion ? 1 : [1, 1.12, 1],
                     rotate: prefersReducedMotion ? 0 : [0, 6, -4, 0],
@@ -104,7 +104,7 @@ export function Craftsmanship() {
                 <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
                   <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-foreground/10 bg-background/80 text-foreground shadow-inner">
                     <motion.span
-                      className="absolute inset-0 rounded-2xl bg-gradient-to-br from-magenta-500/20 via-transparent to-cyan-500/20 blur-lg"
+                      className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#0cb0c0]/30 via-transparent to-[#73f5ff]/30 blur-lg"
                       animate={{ opacity: prefersReducedMotion ? 0.4 : [0.25, 0.5, 0.25] }}
                       transition={{ duration: 10, repeat: prefersReducedMotion ? 0 : Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                     />
@@ -128,7 +128,7 @@ export function Craftsmanship() {
         </div>
 
         <motion.div
-          className="mt-16 flex flex-col items-center justify-between gap-6 rounded-3xl border border-foreground/10 bg-background/70 px-6 py-8 text-center shadow-lg shadow-magenta-500/5 backdrop-blur md:flex-row md:text-left"
+          className="mt-16 flex flex-col items-center justify-between gap-6 rounded-3xl border border-foreground/10 bg-background/70 px-6 py-8 text-center shadow-[0_30px_60px_rgba(9,164,176,0.08)] backdrop-blur md:flex-row md:text-left"
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}

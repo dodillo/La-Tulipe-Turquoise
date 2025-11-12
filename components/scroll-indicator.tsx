@@ -22,7 +22,7 @@ export function ScrollIndicator() {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 z-50 bg-gradient-to-r from-magenta-500 via-cyan-500 to-magenta-500"
+        className="fixed top-0 left-0 right-0 h-1 z-50 bg-gradient-to-r from-[#035c63] via-[#0fc2c3] to-[#8ffcff]"
         style={{ scaleX: scrollY / 100, transformOrigin: "left" }}
         animate={{
           backgroundPosition: ["0% center", "200% center"],
@@ -35,9 +35,9 @@ export function ScrollIndicator() {
         style={{ scaleX: scrollY / 100, transformOrigin: "left" }}
         animate={{
           boxShadow: [
-            "0 0 20px rgba(217, 70, 239, 0.3), 0 0 40px rgba(6, 182, 212, 0.2)",
-            "0 0 30px rgba(217, 70, 239, 0.5), 0 0 60px rgba(6, 182, 212, 0.3)",
-            "0 0 20px rgba(217, 70, 239, 0.3), 0 0 40px rgba(6, 182, 212, 0.2)",
+            "0 0 20px rgba(9, 147, 160, 0.45), 0 0 40px rgba(111, 245, 255, 0.25)",
+            "0 0 30px rgba(9, 147, 160, 0.6), 0 0 60px rgba(111, 245, 255, 0.35)",
+            "0 0 20px rgba(9, 147, 160, 0.45), 0 0 40px rgba(111, 245, 255, 0.25)",
           ],
         }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
@@ -45,7 +45,7 @@ export function ScrollIndicator() {
 
       {isVisible && (
         <motion.div
-          className="fixed bottom-8 right-8 z-40 w-16 h-16 rounded-full bg-gradient-to-r from-magenta-600 to-cyan-600 flex items-center justify-center font-bold text-white text-sm backdrop-blur-sm border border-magenta-500/50 shadow-lg shadow-magenta-500/50"
+          className="fixed bottom-8 right-8 z-40 w-16 h-16 rounded-full bg-gradient-to-r from-[#048396] to-[#72f5ff] flex items-center justify-center font-bold text-white text-sm backdrop-blur-sm border border-[#048396]/60 shadow-lg shadow-[#048396]/45"
           initial={{ opacity: 0, scale: 0, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0, y: 50 }}

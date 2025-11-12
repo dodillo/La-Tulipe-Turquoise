@@ -53,7 +53,7 @@ export default function CheckoutPage() {
         vy: Math.sin(angle) * speed - 3,
         life: 1,
         size: Math.random() * 8 + 3,
-        color: ["#d946ef", "#06b6d4", "#6366f1", "#f97316"][Math.floor(Math.random() * 4)],
+        color: ["#038a9a", "#0fc2c3", "#72f5ff", "#c6fffb"][Math.floor(Math.random() * 4)],
         rotation: Math.random() * Math.PI * 2,
         rotationSpeed: (Math.random() - 0.5) * 0.3,
       })
@@ -123,7 +123,7 @@ export default function CheckoutPage() {
           }}
           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
           style={{
-            background: "linear-gradient(135deg, #d946ef 0%, #06b6d4 100%)",
+            background: "linear-gradient(135deg, #038a9a 0%, #72f5ff 100%)",
           }}
         />
 
@@ -142,12 +142,12 @@ export default function CheckoutPage() {
                     <motion.div
                       className={`w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 border-2 transition-all ${
                         isCompleted || isActive
-                          ? "border-magenta-500 bg-gradient-to-r from-magenta-600 to-cyan-600 text-white"
+                          ? "border-[#049bac] bg-gradient-to-r from-[#038a9a] to-[#72f5ff] text-white"
                           : "border-slate-600 bg-slate-800/50 text-slate-300"
                       }`}
                       animate={{
                         scale: isActive ? 1.15 : 1,
-                        boxShadow: isActive ? "0 0 30px rgba(217, 70, 239, 0.8)" : "none",
+                        boxShadow: isActive ? "0 0 30px rgba(4, 155, 172, 0.8)" : "none",
                       }}
                       transition={{ duration: 0.3 }}
                     >
@@ -175,7 +175,7 @@ export default function CheckoutPage() {
                         animate={{
                           scaleX: 1,
                           background: isCompleted
-                            ? "linear-gradient(90deg, #d946ef 0%, #06b6d4 100%)"
+                            ? "linear-gradient(90deg, #038a9a 0%, #72f5ff 100%)"
                             : "rgb(55, 65, 81)",
                         }}
                         transition={{ duration: 0.4, delay: idx * 0.1 }}
@@ -202,7 +202,7 @@ export default function CheckoutPage() {
                 transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY }}
               >
                 <motion.div
-                  className="w-24 h-24 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 flex items-center justify-center shadow-2xl"
+                  className="w-24 h-24 rounded-full bg-gradient-to-r from-[#038a9a] to-[#72f5ff] flex items-center justify-center shadow-2xl"
                   initial={{ scale: 0, rotate: -180 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
@@ -221,7 +221,7 @@ export default function CheckoutPage() {
               </motion.div>
 
               <motion.h1
-                className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-magenta-400 to-cyan-400 mb-4"
+                className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#049bac] via-[#31e0f0] to-[#9efbff] mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -259,7 +259,7 @@ export default function CheckoutPage() {
 
               <motion.button
                 onClick={() => (window.location.href = "/")}
-                className="px-8 py-4 rounded-xl font-bold text-lg bg-gradient-to-r from-magenta-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-magenta-500/50 transition-all"
+                className="px-8 py-4 rounded-xl font-bold text-lg bg-gradient-to-r from-[#038a9a] to-[#72f5ff] text-white hover:shadow-lg hover:shadow-[#038a9a]/40 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0 }}
@@ -375,7 +375,7 @@ export default function CheckoutPage() {
 
                     <motion.button
                       type="submit"
-                      className="w-full py-4 bg-gradient-to-r from-magenta-600 to-cyan-600 text-white font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-magenta-500/50 transition-all"
+                      className="w-full py-4 bg-gradient-to-r from-[#038a9a] to-[#72f5ff] text-white font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-[#038a9a]/40 transition-all"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -422,7 +422,7 @@ export default function CheckoutPage() {
                       <span>Shipping</span>
                       <span className="text-green-400 font-bold">Free</span>
                     </div>
-                    <div className="flex justify-between text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-magenta-400 to-cyan-400 pt-4 border-t border-slate-600">
+                    <div className="flex justify-between text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#049bac] via-[#31e0f0] to-[#9efbff] pt-4 border-t border-slate-600">
                       <span>Total</span>
                       <span>${(total() * 1.1).toFixed(2)}</span>
                     </div>

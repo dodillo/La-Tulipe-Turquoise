@@ -2,7 +2,7 @@ import * as THREE from "three"
 
 export const createFloatingFlowerScene = (canvas: HTMLCanvasElement) => {
   const scene = new THREE.Scene()
-  scene.background = new THREE.Color(0x0a0e27)
+  scene.background = new THREE.Color(0x031c20)
 
   const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000)
   camera.position.z = 3
@@ -14,8 +14,8 @@ export const createFloatingFlowerScene = (canvas: HTMLCanvasElement) => {
   // Create rotating flower-like geometry
   const geometry = new THREE.IcosahedronGeometry(1, 5)
   const material = new THREE.MeshPhongMaterial({
-    color: 0xd946ef,
-    emissive: 0x6366f1,
+    color: 0x049bac,
+    emissive: 0x72f5ff,
     shininess: 100,
   })
 
@@ -23,11 +23,11 @@ export const createFloatingFlowerScene = (canvas: HTMLCanvasElement) => {
   scene.add(flower)
 
   // Lighting
-  const light1 = new THREE.PointLight(0xd946ef, 1, 100)
+  const light1 = new THREE.PointLight(0x049bac, 1, 100)
   light1.position.set(5, 5, 5)
   scene.add(light1)
 
-  const light2 = new THREE.PointLight(0x06b6d4, 0.8, 100)
+  const light2 = new THREE.PointLight(0x72f5ff, 0.8, 100)
   light2.position.set(-5, -5, 5)
   scene.add(light2)
 
@@ -85,7 +85,7 @@ export const createParticleField = (canvas: HTMLCanvasElement) => {
 
   const animate = () => {
     requestAnimationFrame(animate)
-    ctx.fillStyle = "rgba(10, 14, 39, 0.1)"
+    ctx.fillStyle = "rgba(3, 28, 32, 0.12)"
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
     particles.forEach((p) => {
@@ -97,8 +97,8 @@ export const createParticleField = (canvas: HTMLCanvasElement) => {
 
       // Draw gradient particles
       const gradient = ctx.createLinearGradient(p.x - p.size, p.y - p.size, p.x + p.size, p.y + p.size)
-      gradient.addColorStop(0, "#d946ef")
-      gradient.addColorStop(1, "#06b6d4")
+      gradient.addColorStop(0, "#038a9a")
+      gradient.addColorStop(1, "#72f5ff")
 
       ctx.fillStyle = gradient
       ctx.beginPath()

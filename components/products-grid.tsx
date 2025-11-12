@@ -142,7 +142,7 @@ export function ProductsGrid() {
             {/* Background gradient for active state */}
             {activeCategory === category && (
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-magenta-600 to-cyan-600 -z-10"
+                className="absolute inset-0 bg-gradient-to-r from-[#048396] to-[#70f7ff] -z-10"
                 layoutId="activeCategory"
                 transition={{ type: "spring", stiffness: 380, damping: 30 }}
               />
@@ -152,9 +152,11 @@ export function ProductsGrid() {
             <motion.div
               className="absolute inset-0 border-2 border-transparent rounded-lg pointer-events-none"
               animate={{
-                borderColor: activeCategory === category ? "rgba(217, 70, 239, 0.5)" : "rgba(6, 182, 212, 0.2)",
+                borderColor: activeCategory === category ? "rgba(8, 147, 160, 0.55)" : "rgba(6, 182, 212, 0.25)",
                 boxShadow:
-                  activeCategory === category ? "0 0 20px rgba(217, 70, 239, 0.6)" : "0 0 10px rgba(6, 182, 212, 0.3)",
+                  activeCategory === category
+                    ? "0 0 24px rgba(8, 147, 160, 0.65)"
+                    : "0 0 12px rgba(111, 245, 255, 0.4)",
               }}
               transition={{ duration: 0.3 }}
             />
@@ -186,7 +188,7 @@ export function ProductsGrid() {
             >
               {/* Glitch border effect container */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-magenta-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 bg-gradient-to-br from-[#048396]/30 via-[#0fc2c3]/30 to-[#8ffcff]/30 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100"
                 transition={{ duration: 0.3 }}
               />
 

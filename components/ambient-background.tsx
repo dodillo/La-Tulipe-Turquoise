@@ -16,12 +16,12 @@ type AmbientShape = {
 }
 
 const SHAPES: AmbientShape[] = [
-  { size: 480, top: "5%", left: "-10%", duration: 22, delay: 0, blur: 40, opacity: 0.35, hue: "rgba(217, 70, 239, 0.6)" },
-  { size: 360, top: "18%", left: "70%", duration: 28, delay: 2, blur: 32, opacity: 0.3, hue: "rgba(59, 130, 246, 0.45)" },
-  { size: 420, top: "42%", left: "15%", duration: 26, delay: 4, blur: 36, opacity: 0.28, hue: "rgba(34, 211, 238, 0.4)" },
-  { size: 520, top: "62%", left: "68%", duration: 32, delay: 1, blur: 44, opacity: 0.25, hue: "rgba(251, 191, 36, 0.35)" },
-  { size: 380, top: "78%", left: "-8%", duration: 24, delay: 3, blur: 28, opacity: 0.3, hue: "rgba(244, 114, 182, 0.4)" },
-  { size: 300, top: "28%", left: "40%", duration: 18, delay: 5, blur: 24, opacity: 0.22, hue: "rgba(139, 92, 246, 0.35)" },
+  { size: 480, top: "5%", left: "-10%", duration: 22, delay: 0, blur: 40, opacity: 0.35, hue: "rgba(12, 176, 192, 0.55)" },
+  { size: 360, top: "18%", left: "70%", duration: 28, delay: 2, blur: 32, opacity: 0.3, hue: "rgba(111, 245, 255, 0.45)" },
+  { size: 420, top: "42%", left: "15%", duration: 26, delay: 4, blur: 36, opacity: 0.28, hue: "rgba(72, 226, 218, 0.4)" },
+  { size: 520, top: "62%", left: "68%", duration: 32, delay: 1, blur: 44, opacity: 0.25, hue: "rgba(188, 255, 248, 0.35)" },
+  { size: 380, top: "78%", left: "-8%", duration: 24, delay: 3, blur: 28, opacity: 0.3, hue: "rgba(96, 224, 233, 0.38)" },
+  { size: 300, top: "28%", left: "40%", duration: 18, delay: 5, blur: 24, opacity: 0.22, hue: "rgba(49, 198, 210, 0.32)" },
 ]
 
 export const AmbientBackground = memo(function AmbientBackground() {
@@ -36,7 +36,7 @@ export const AmbientBackground = memo(function AmbientBackground() {
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(circle at 10% 20%, rgba(217,70,239,0.18), transparent 55%), radial-gradient(circle at 80% 10%, rgba(56,189,248,0.18), transparent 50%), radial-gradient(circle at 50% 80%, rgba(251,191,36,0.15), transparent 55%)",
+            "radial-gradient(circle at 10% 20%, rgba(12,176,192,0.2), transparent 55%), radial-gradient(circle at 80% 10%, rgba(111,245,255,0.2), transparent 50%), radial-gradient(circle at 50% 80%, rgba(188,255,248,0.18), transparent 55%)",
         }}
       />
     )

@@ -63,7 +63,7 @@ export function EasterEgg() {
         vy: Math.sin(angle) * speed,
         life: 1,
         size: Math.random() * 6 + 2,
-        color: ["#d946ef", "#06b6d4", "#f97316", "#ec4899"][Math.floor(Math.random() * 4)],
+        color: ["#038a9a", "#0fc2c3", "#72f5ff", "#b8fff9"][Math.floor(Math.random() * 4)],
       })
     }
 

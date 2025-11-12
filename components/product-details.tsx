@@ -69,7 +69,7 @@ export function ProductDetails({
         <motion.h1
           className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight"
           whileHover={{
-            textShadow: "2px 2px #d946ef, -2px -2px #06b6d4",
+            textShadow: "2px 2px #0cb0c0, -2px -2px #72f5ff",
           }}
         >
           {name}
@@ -95,7 +95,7 @@ export function ProductDetails({
       </motion.div>
 
       <motion.div className="flex items-center gap-6" variants={itemVariants}>
-        <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-magenta-400 to-cyan-400">
+        <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#049bac] via-[#31e0f0] to-[#9efbff]">
           ${price.toFixed(2)}
         </div>
         <motion.div
@@ -125,7 +125,7 @@ export function ProductDetails({
           <div className="flex items-center gap-3 bg-slate-800/50 border border-slate-700 rounded-lg p-3">
             <motion.button
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
-              className="w-8 h-8 rounded-full hover:bg-magenta-600/50 flex items-center justify-center text-white transition-colors"
+              className="w-8 h-8 rounded-full hover:bg-[#049bac]/50 flex items-center justify-center text-white transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.85 }}
             >
@@ -156,12 +156,12 @@ export function ProductDetails({
           disabled={!inStock}
           className="w-full py-4 rounded-xl font-bold text-lg text-white uppercase tracking-wide overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed"
           whileHover={{
-            boxShadow: "0 0 30px rgba(217, 70, 239, 0.8)",
+            boxShadow: "0 0 30px rgba(4, 155, 172, 0.8)",
           }}
           whileTap={{ scale: 0.95 }}
         >
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-magenta-600 to-cyan-600"
+            className="absolute inset-0 bg-gradient-to-r from-[#038a9a] via-[#11c6d4] to-[#7df7ff]"
             animate={addedToCart ? { x: ["0%", "100%"] } : {}}
             transition={{ duration: 0.5 }}
           />
@@ -194,15 +194,15 @@ export function ProductDetails({
 
       {deliveryDate && (
         <motion.div
-          className="bg-gradient-to-r from-cyan-600/20 to-magenta-600/20 border border-cyan-500/30 rounded-xl p-6 backdrop-blur-sm"
+          className="bg-gradient-to-r from-[#038a9a]/20 to-[#72f5ff]/20 border border-[#038a9a]/30 rounded-xl p-6 backdrop-blur-sm"
           variants={itemVariants}
           whileHover={{
-            borderColor: "rgba(217, 70, 239, 0.6)",
+            borderColor: "rgba(4, 155, 172, 0.6)",
           }}
         >
           <div className="flex items-start gap-4">
             <motion.div
-              className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-600 to-magenta-600 flex items-center justify-center flex-shrink-0"
+              className="w-10 h-10 rounded-full bg-gradient-to-r from-[#038a9a] to-[#72f5ff] flex items-center justify-center flex-shrink-0"
               whileHover={{ scale: 1.1, rotate: 10 }}
             >
               <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">

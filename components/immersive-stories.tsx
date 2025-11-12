@@ -60,7 +60,7 @@ export function ImmersiveStories() {
           style={{ y: backgroundShift }}
         />
         <motion.div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(217,70,239,0.18),transparent_55%),radial-gradient(circle_at_80%_10%,rgba(34,211,238,0.16),transparent_55%),radial-gradient(circle_at_50%_80%,rgba(251,191,36,0.12),transparent_60%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(12,176,192,0.2),transparent_55%),radial-gradient(circle_at_80%_10%,rgba(111,245,255,0.18),transparent_55%),radial-gradient(circle_at_50%_80%,rgba(188,255,248,0.15),transparent_60%)]"
           style={{ opacity: shimmerOpacity }}
         />
       </div>
@@ -105,7 +105,7 @@ export function ImmersiveStories() {
           {STORIES.map((story, index) => (
             <motion.article
               key={story.title}
-              className="relative overflow-hidden rounded-[2.75rem] border border-foreground/10 bg-background/70 shadow-xl shadow-magenta-500/10 backdrop-blur"
+              className="relative overflow-hidden rounded-[2.75rem] border border-foreground/10 bg-background/70 shadow-[0_40px_80px_rgba(9,164,176,0.12)] backdrop-blur"
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}

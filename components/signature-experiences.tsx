@@ -60,12 +60,14 @@ export function SignatureExperiences() {
 
   return (
     <section className="relative overflow-hidden py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#d1fbf6_0%,#f4fffe_48%,#effcff_100%)]" />
+      <div className="absolute -left-20 top-12 h-72 w-72 rounded-full bg-[#8cf6ff] opacity-50 blur-[140px]" />
+      <div className="absolute -right-16 bottom-0 h-96 w-96 rounded-full bg-[#21cfd3] opacity-30 blur-[170px]" />
 
       <div className="container relative z-10 mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <motion.span
-            className="inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background/70 px-4 py-2 text-xs uppercase tracking-[0.3em] text-muted-foreground backdrop-blur"
+            className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary shadow-[0_10px_40px_rgba(13,179,187,0.2)] backdrop-blur"
             initial={{ opacity: 0, y: -8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -74,7 +76,7 @@ export function SignatureExperiences() {
             Crafted Moments
           </motion.span>
           <motion.h2
-            className="mt-6 font-serif text-4xl text-foreground md:text-5xl"
+            className="mt-6 bg-gradient-to-r from-[#0f9bb4] via-[#16c6c7] to-[#48f0d9] bg-clip-text font-serif text-4xl text-transparent md:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -83,7 +85,7 @@ export function SignatureExperiences() {
             Signature experiences that feel like a dream sequence.
           </motion.h2>
           <motion.p
-            className="mt-4 text-lg text-muted-foreground"
+            className="mt-4 text-lg text-slate-600"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -95,7 +97,7 @@ export function SignatureExperiences() {
         </div>
 
         <motion.div
-          className="mt-16 grid gap-8 lg:grid-cols-3"
+          className="mt-16 grid gap-8 lg:grid-cols-3 lg:gap-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
@@ -111,7 +113,7 @@ export function SignatureExperiences() {
           {EXPERIENCES.map((experience) => (
             <motion.article
               key={experience.title}
-              className="group relative overflow-hidden rounded-[2.5rem] border border-foreground/10 bg-background/60 shadow-xl shadow-magenta-500/10 backdrop-blur"
+              className="group relative overflow-hidden rounded-[2.75rem] border border-white/60 bg-white/90 shadow-[0_35px_80px_rgba(11,169,184,0.18)] backdrop-blur-xl transition duration-500"
               variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
               whileHover={{ y: prefersReducedMotion ? 0 : -12 }}
             >
@@ -124,12 +126,12 @@ export function SignatureExperiences() {
                   transition={{ duration: prefersReducedMotion ? 0 : 18, repeat: prefersReducedMotion ? 0 : Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                 />
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-[rgba(4,42,44,0.92)] via-transparent to-transparent"
                   animate={{ opacity: prefersReducedMotion ? 0.75 : [0.7, 0.5, 0.7] }}
                   transition={{ duration: 10, repeat: prefersReducedMotion ? 0 : Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                 />
                 <motion.span
-                  className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/20 px-4 py-2 text-xs uppercase tracking-[0.25em] text-white backdrop-blur"
+                  className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/40 bg-gradient-to-r from-[#0cb0c0] to-[#4ee4da] px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white shadow-[0_10px_30px_rgba(13,179,187,0.45)] backdrop-blur"
                   initial={{ opacity: 0, y: -12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -141,19 +143,19 @@ export function SignatureExperiences() {
 
               <div className="flex h-full flex-col gap-6 px-8 py-10">
                 <div className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-foreground/10 bg-background/80 text-foreground">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/50 bg-gradient-to-br from-[#0cb0c0] to-[#58e0d9] text-white shadow-[0_10px_25px_rgba(12,176,192,0.35)]">
                     {experience.icon}
                   </span>
-                  <h3 className="font-serif text-2xl text-foreground">{experience.title}</h3>
+                  <h3 className="font-serif text-2xl text-slate-900">{experience.title}</h3>
                 </div>
-                <p className="text-base text-muted-foreground">{experience.description}</p>
+                <p className="text-base text-slate-600">{experience.description}</p>
                 <motion.div
-                  className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-foreground"
+                  className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary"
                   whileHover={{ gap: prefersReducedMotion ? 8 : 12 }}
                 >
                   Explore experience
                   <motion.span
-                    className="inline-block h-px w-8 bg-foreground/40"
+                    className="inline-block h-px w-8 bg-gradient-to-r from-[#0cb0c0] to-[#72f1ff] opacity-80"
                     animate={{ width: prefersReducedMotion ? 32 : [32, 48, 32] }}
                     transition={{ duration: 2.2, repeat: prefersReducedMotion ? 0 : Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                   />
@@ -164,7 +166,7 @@ export function SignatureExperiences() {
         </motion.div>
 
         <motion.div
-          className="mt-16 overflow-hidden rounded-full border border-foreground/10 bg-background/70 py-4 backdrop-blur"
+          className="mt-16 overflow-hidden rounded-full border border-white/50 bg-white/80 py-4 shadow-[0_20px_50px_rgba(13,179,187,0.18)] backdrop-blur"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -173,7 +175,7 @@ export function SignatureExperiences() {
           <div className="relative overflow-hidden">
             <div
               role="presentation"
-              className="flex gap-12 whitespace-nowrap text-sm uppercase tracking-[0.4em] text-muted-foreground will-change-transform animate-marquee-ltr"
+              className="flex gap-12 whitespace-nowrap text-sm uppercase tracking-[0.4em] text-primary/70 will-change-transform animate-marquee-ltr"
               style={marqueeStyle}
             >
               {EXPERIENCE_MARQUEE_ITEMS.map((label, index) => (
@@ -183,8 +185,8 @@ export function SignatureExperiences() {
               ))}
             </div>
 
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background via-background/60 to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background via-background/60 to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white via-white/70 to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white via-white/70 to-transparent" />
           </div>
         </motion.div>
       </div>

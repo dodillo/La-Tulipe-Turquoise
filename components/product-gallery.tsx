@@ -58,15 +58,15 @@ export function ProductGallery({ images }: ProductGalleryProps) {
       {/* Main gallery with liquid transition */}
       <div
         ref={containerRef}
-        className="relative w-full aspect-square bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl overflow-hidden group border border-slate-700/50"
+        className="relative w-full aspect-square bg-gradient-to-br from-[#01262b] via-[#02383f] to-[#01262b] rounded-2xl overflow-hidden group border border-white/10"
       >
         <motion.div
           className="absolute inset-0 opacity-30"
           animate={{
             background: [
-              "linear-gradient(45deg, #d946ef 0%, transparent 50%)",
-              "linear-gradient(45deg, transparent 0%, #06b6d4 50%)",
-              "linear-gradient(45deg, #d946ef 0%, transparent 50%)",
+              "linear-gradient(45deg, #0cb0c0 0%, transparent 50%)",
+              "linear-gradient(45deg, transparent 0%, #73f5ff 50%)",
+              "linear-gradient(45deg, #0cb0c0 0%, transparent 50%)",
             ],
           }}
           transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
@@ -97,9 +97,9 @@ export function ProductGallery({ images }: ProductGalleryProps) {
               className="absolute inset-0"
               animate={{
                 boxShadow: [
-                  "inset 0 0 40px rgba(217, 70, 239, 0.1), inset 0 0 20px rgba(6, 182, 212, 0.05)",
-                  "inset 0 0 60px rgba(217, 70, 239, 0.2), inset 0 0 30px rgba(6, 182, 212, 0.1)",
-                  "inset 0 0 40px rgba(217, 70, 239, 0.1), inset 0 0 20px rgba(6, 182, 212, 0.05)",
+                  "inset 0 0 40px rgba(9, 147, 160, 0.18), inset 0 0 20px rgba(111, 245, 255, 0.08)",
+                  "inset 0 0 60px rgba(9, 147, 160, 0.28), inset 0 0 30px rgba(111, 245, 255, 0.15)",
+                  "inset 0 0 40px rgba(9, 147, 160, 0.18), inset 0 0 20px rgba(111, 245, 255, 0.08)",
                 ],
               }}
               transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
@@ -110,11 +110,11 @@ export function ProductGallery({ images }: ProductGalleryProps) {
         {images.length > 1 && (
           <>
             <motion.button
-              className="absolute left-6 top-1/2 -translate-y-1/2 z-10 p-4 rounded-full bg-gradient-to-r from-magenta-600/30 to-cyan-600/30 border border-magenta-500/40 text-white backdrop-blur-sm hover:border-magenta-500/60 group/btn"
+              className="absolute left-6 top-1/2 -translate-y-1/2 z-10 p-4 rounded-full bg-gradient-to-r from-[#048396]/35 to-[#72f5ff]/35 border border-[#048396]/50 text-white backdrop-blur-sm hover:border-[#048396]/70 group/btn"
               onClick={() => paginate(-1)}
               whileHover={{
                 scale: 1.15,
-                boxShadow: "0 0 30px rgba(217, 70, 239, 0.6)",
+                boxShadow: "0 0 30px rgba(4, 147, 150, 0.6)",
               }}
               whileTap={{ scale: 0.85 }}
             >
@@ -129,11 +129,11 @@ export function ProductGallery({ images }: ProductGalleryProps) {
             </motion.button>
 
             <motion.button
-              className="absolute right-6 top-1/2 -translate-y-1/2 z-10 p-4 rounded-full bg-gradient-to-r from-magenta-600/30 to-cyan-600/30 border border-magenta-500/40 text-white backdrop-blur-sm hover:border-magenta-500/60 group/btn"
+              className="absolute right-6 top-1/2 -translate-y-1/2 z-10 p-4 rounded-full bg-gradient-to-r from-[#048396]/35 to-[#72f5ff]/35 border border-[#048396]/50 text-white backdrop-blur-sm hover:border-[#048396]/70 group/btn"
               onClick={() => paginate(1)}
               whileHover={{
                 scale: 1.15,
-                boxShadow: "0 0 30px rgba(217, 70, 239, 0.6)",
+                boxShadow: "0 0 30px rgba(4, 147, 150, 0.6)",
               }}
               whileTap={{ scale: 0.85 }}
             >
@@ -168,11 +168,11 @@ export function ProductGallery({ images }: ProductGalleryProps) {
                 setDirection(idx > selectedIndex ? 1 : -1)
                 setSelectedIndex(idx)
               }}
-              className={`flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden relative group border-2 transition-all ${
-                selectedIndex === idx
-                  ? "border-magenta-500 shadow-lg shadow-magenta-500/50"
-                  : "border-slate-600 hover:border-cyan-500/50"
-              }`}
+                className={`flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden relative group border-2 transition-all ${
+                  selectedIndex === idx
+                    ? "border-[#0cb0c0] shadow-lg shadow-[#0cb0c0]/40"
+                    : "border-slate-600 hover:border-cyan-500/50"
+                }`}
               whileHover={{ scale: 1.08, y: -2 }}
               whileTap={{ scale: 0.92 }}
               initial={{ opacity: 0, y: 20 }}
@@ -186,14 +186,14 @@ export function ProductGallery({ images }: ProductGalleryProps) {
               />
 
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-magenta-500/0 via-cyan-500/0 to-magenta-500/0 pointer-events-none"
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent pointer-events-none"
                 animate={
                   selectedIndex === idx
                     ? {
                         background: [
-                          "linear-gradient(45deg, #d946ef/0 0%, #06b6d4/0 50%, #d946ef/0 100%)",
-                          "linear-gradient(45deg, #d946ef/30 0%, #06b6d4/30 50%, #d946ef/30 100%)",
-                          "linear-gradient(45deg, #d946ef/0 0%, #06b6d4/0 50%, #d946ef/0 100%)",
+                          "linear-gradient(45deg, rgba(12,176,192,0) 0%, rgba(115,245,255,0) 50%, rgba(12,176,192,0) 100%)",
+                          "linear-gradient(45deg, rgba(12,176,192,0.35) 0%, rgba(115,245,255,0.35) 50%, rgba(12,176,192,0.35) 100%)",
+                          "linear-gradient(45deg, rgba(12,176,192,0) 0%, rgba(115,245,255,0) 50%, rgba(12,176,192,0) 100%)",
                         ],
                       }
                     : {}

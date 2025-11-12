@@ -71,7 +71,7 @@ export function HeroSection() {
         {gradientPositions.map((gradient, index) => (
           <motion.span
             key={index}
-            className="absolute rounded-full bg-gradient-to-br from-magenta-500/30 via-white/5 to-transparent"
+            className="absolute rounded-full bg-gradient-to-br from-[#0cb0c0]/30 via-white/5 to-transparent"
             style={{
               width: gradient.size,
               height: gradient.size,
@@ -242,24 +242,24 @@ export function HeroSection() {
                 <p className="text-[0.55rem] uppercase tracking-[0.4em] text-white/70">Palette study</p>
                 <div className="mt-4 space-y-4">
                   <div className="flex items-center gap-3">
-                    <span className="h-10 w-10 rounded-full bg-[#f6d7e7]" />
+                    <span className="h-10 w-10 rounded-full bg-[#c6fffb]" />
                     <div>
                       <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/80">Peony blush</p>
-                      <p className="text-[0.65rem] text-white/55">#F6D7E7</p>
+                      <p className="text-[0.65rem] text-white/55">#C6FFFB</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="h-10 w-10 rounded-full bg-[#f4ede3]" />
+                    <span className="h-10 w-10 rounded-full bg-[#9df5ff]" />
                     <div>
                       <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/80">Champagne silk</p>
-                      <p className="text-[0.65rem] text-white/55">#F4EDE3</p>
+                      <p className="text-[0.65rem] text-white/55">#9DF5FF</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="h-10 w-10 rounded-full bg-[#d3c4f1]" />
+                    <span className="h-10 w-10 rounded-full bg-[#58d8d8]" />
                     <div>
                       <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/80">Orchid haze</p>
-                      <p className="text-[0.65rem] text-white/55">#D3C4F1</p>
+                      <p className="text-[0.65rem] text-white/55">#58D8D8</p>
                     </div>
                   </div>
                 </div>

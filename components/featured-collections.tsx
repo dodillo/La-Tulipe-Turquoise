@@ -26,7 +26,7 @@ const COLLECTIONS: Collection[] = [
     description: "Crimson Ecuadorian roses cascading with vanilla orchids and hand-dyed silk ribbon.",
     image: "/romantic-red-roses-bouquet-arrangement-elegant-pro.jpg",
     price: "From $95",
-    palette: ["#f97316", "#d946ef", "#9333ea"],
+    palette: ["#013f49", "#0cb0c0", "#8efbff"],
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const COLLECTIONS: Collection[] = [
     description: "A rotating curation of rare seasonal stems, wild grasses, and aromatic herbs.",
     image: "/seasonal-mixed-flowers-bouquet-arrangement-profess.jpg",
     price: "From $75",
-    palette: ["#0ea5e9", "#14b8a6", "#facc15"],
+    palette: ["#035c63", "#3ed9d3", "#ccfffb"],
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const COLLECTIONS: Collection[] = [
     description: "Statement arrangements with preserved elements, architectural branches, and custom vessels.",
     image: "/luxury-premium-exotic-flowers-arrangement-professi.jpg",
     price: "From $150",
-    palette: ["#f43f5e", "#f97316", "#38bdf8"],
+    palette: ["#02262b", "#09aab8", "#73f5ff"],
   },
 ]
 
@@ -52,7 +52,7 @@ function CollectionCard({ collection }: { collection: Collection }) {
   const glowY = useMotionValue(0)
   const { prefersReducedMotion } = useMotionPreferences()
 
-  const gradient: MotionValue<string> = useMotionTemplate`radial-gradient(420px circle at ${glowX}px ${glowY}px, rgba(217,70,239,0.18), rgba(59,130,246,0.1) 45%, transparent 70%)`
+  const gradient: MotionValue<string> = useMotionTemplate`radial-gradient(420px circle at ${glowX}px ${glowY}px, rgba(9,164,176,0.25), rgba(115,245,255,0.2) 45%, transparent 70%)`
 
   const setGlowPosition = useCallback(
     (x: number, y: number) => {
@@ -80,7 +80,7 @@ function CollectionCard({ collection }: { collection: Collection }) {
   return (
     <motion.article
       ref={ref}
-      className="group relative overflow-hidden rounded-[2rem] border border-foreground/10 bg-background/70 p-6 shadow-lg shadow-magenta-500/10 backdrop-blur transition-all duration-500 hover:border-foreground/20"
+      className="group relative overflow-hidden rounded-[2rem] border border-foreground/10 bg-background/70 p-6 shadow-[0_35px_80px_rgba(9,164,176,0.12)] backdrop-blur transition-all duration-500 hover:border-primary/40"
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       initial={{ opacity: 0, y: 40 }}
